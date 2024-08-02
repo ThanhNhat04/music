@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widget/title_btn.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -10,16 +12,23 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      body: Column(
+    return Scaffold(
+      body: SafeArea(
+          child: Row(
         children: [
-          Text(""),
-          Text("data"),
-          ListView.builder(
-            itemBuilder: (context, index) =>  Container(),
-          )
+          Expanded(
+              flex: 1,
+              child: Container(
+                color: Colors.brown,
+              )),
+          Expanded(
+              flex: 4,
+              child: Container(
+                color: const Color.fromARGB(255, 96, 144, 207),
+                child: Container(),
+              ))
         ],
-      ),
+      )),
     );
   }
 }
